@@ -4,7 +4,7 @@
 
 #include "ltime/lib.h"
 
-#if defined(_MSC_VER)
+#ifdef _MSC_VER
     #define EXPORT __declspec(dllexport)
 #elif defined(__GNUC__)
     #define EXPORT __attribute__((visibility("default")))
@@ -53,11 +53,6 @@ EXPORT int luaopen_time(lua_State* L)
     // Fill library table with functions.
     luaL_newlibtable(L, timerlib);
     luaL_setfuncs(L, timerlib, 0);
-
-    // Set system variable.
-    lua_pushstring(L, "system");
-    lua_pushstring(L, LUA_LTIMER_SYSTEM);
-    lua_settable(L, -3);
 
     return 1;
 }

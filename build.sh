@@ -2,4 +2,4 @@
 
 mkdir -p build
 gcc -O3 -Wall $(pkg-config --cflags --libs lua54) -fPIC -shared \
-    -Isrc src/ltime/*.c -o build/time.so
+    -Isrc src/ltime/*.c -o build/time.so $*

@@ -5,7 +5,7 @@
 
 #define USECONDS_PER_SECOND 1000000LL
 
-#ifdef LUA_LTIMER_WINDOWS
+#ifdef LUA_LTIME_WINDOWS
 #include <inttypes.h>
 #include <Windows.h>
 #else
@@ -18,7 +18,7 @@ const lua_Integer NANOSECONDS_PER_MICROSECOND = 1000LL;
 
 lua_Integer ltime_uclock(void)
 {
-#ifdef LUA_LTIMER_WINDOWS
+#ifdef LUA_LTIME_WINDOWS
     FILETIME ft;
     GetSystemTimeAsFileTime(&ft);
 
