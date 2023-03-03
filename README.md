@@ -63,6 +63,7 @@ Return a high-precision clock as an integer in microseconds.
 time.usleep(duration: integer)
 ```
 Make the running thread sleep for a duration of time in microseconds.
+`duration` is expected to be an integer >= 0.
 ## time.clock
 ```lua
 time.clock() -> number
@@ -73,3 +74,4 @@ Return a high-precision clock value as a number in seconds.
 time.sleep(duration: number)
 ```
 Make the running thread sleep for a duration of time in seconds.
+`duration` is expected to be a number >= 0.
