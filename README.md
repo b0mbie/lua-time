@@ -69,7 +69,7 @@ Make the running thread sleep for a duration of time in microseconds.
 time.clock() -> number
 ```
 Return a high-precision clock value as a number in seconds.
-## time.sclock
+## time.sleep
 ```lua
 time.sleep(duration: number)
 ```
